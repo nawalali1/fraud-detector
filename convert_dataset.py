@@ -8,7 +8,7 @@ from scipy.io import arff
 print("Converting dataset_31_credit-g.arff to creditcard.csv...")
 
 # Load ARFF file
-data, meta = arff.loadarff('dataset_31_credit-g.arff')
+data, meta = arff.loadarff('data/dataset_31_credit-g.arff')
 
 # Convert to DataFrame
 df = pd.DataFrame(data)
@@ -48,7 +48,7 @@ df = df.rename(columns=column_mapping)
 df['Class'] = df['Class'].map({'good': 0, 'bad': 1})
 
 # Save as creditcard.csv
-df.to_csv('creditcard.csv', index=False)
+df.to_csv('data/creditcard.csv', index=False)
 
 print("✅ SUCCESS! Created creditcard.csv")
 print(f"   Shape: {df.shape}")

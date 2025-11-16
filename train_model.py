@@ -18,7 +18,7 @@ print("=" * 70)
 
 # Load dataset
 print("\n[1/5] Loading creditcard.csv...")
-df = pd.read_csv('creditcard.csv')
+df = pd.read_csv('data/creditcard.csv')
 print(f"   Dataset shape: {df.shape}")
 print(f"   Columns: {list(df.columns)}")
 
