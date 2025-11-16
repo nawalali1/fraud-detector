@@ -4,7 +4,7 @@ A machine learning web application for detecting fraudulent credit card transact
 
 ## Live Demo
 
-[View Application](YOUR_URL_HERE)
+https://fraud-detector-env.eba-wjpngskr.eu-west-2.elasticbeanstalk.com/
 
 ## Overview
 
