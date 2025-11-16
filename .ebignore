@@ -1,0 +1,12 @@
+# Ignore everything except what's needed
+*.zip
+*.pyc
+__pycache__/
+.vscode/
+.idea/
+AWSCLIV2.pkg
+
+# Allow required data folder
+!data/
+!data/creditcard.csv
+!data/dataset_31_credit-g.arff

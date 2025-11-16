@@ -334,10 +334,17 @@ def admin_stats():
 # -------------------------
 # Run
 # -------------------------
+import sys
+
 application = APP
+
+
+if "--initdb" in sys.argv:
+    init_db()
+    print("DB initialised on server")
+    sys.exit(0)
 
 if __name__ == "__main__":
     init_db()
-    import os
     port = int(os.environ.get("PORT", 8080))
     APP.run(host="0.0.0.0", port=port)
