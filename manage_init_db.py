@@ -1,6 +1,22 @@
-from application import init_db
+import sqlite3
 
-if __name__ == "__main__":
-    print("Running database init...")
-    init_db()
-    print("Database init complete.")
+DB_PATH = "history.db"
+
+conn = sqlite3.connect(DB_PATH)
+cur = conn.cursor()
+cur.execute("""
+    CREATE TABLE IF NOT EXISTS history (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        ts TEXT,
+        model TEXT,
+        prediction INTEGER,
+        probability REAL,
+        amount REAL,
+        inputs TEXT
+    )
+""")
+conn.commit()
+conn.close()
+
+print("SQLite DB initialized.")
+
