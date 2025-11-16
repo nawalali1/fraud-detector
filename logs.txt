@@ -1,0 +1,4 @@
+Retrieving logs...
+Logs were saved to /Users/nawal/Documents/fraud-detector/.elasticbeanstalk/logs/251116_172830
+Logs were saved to /Users/nawal/Documents/fraud-detector/.elasticbeanstalk/logs/251116_172830
+Updated symlink at /Users/nawal/Documents/fraud-detector/.elasticbeanstalk/logs/latest
