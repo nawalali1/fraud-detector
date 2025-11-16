@@ -59,7 +59,7 @@ X_test_scaled = scaler.transform(X_test)
 
 # Save scaler
 joblib.dump(scaler, 'scaler.pkl')
-print("   ✅ Saved scaler.pkl")
+print("   Saved scaler.pkl")
 
 # Train model
 print("\n[4/5] Training Random Forest model...")
@@ -73,7 +73,7 @@ model = RandomForestClassifier(
 )
 
 model.fit(X_train_scaled, y_train)
-print("   ✅ Model training complete")
+print("    Model training complete")
 
 # Evaluate
 print("\n[5/5] Evaluating model...")
@@ -94,10 +94,10 @@ print(f"\n   ROC-AUC Score: {auc:.4f}")
 
 # Save model
 joblib.dump(model, 'model.pkl')
-print("\n   ✅ Saved model.pkl")
+print("\n   Saved model.pkl")
 
 print("\n" + "=" * 70)
-print("✅ TRAINING COMPLETE!")
+print(" TRAINING COMPLETE!")
 print("=" * 70)
 print("\nGenerated files:")
 print("  ✓ model.pkl")

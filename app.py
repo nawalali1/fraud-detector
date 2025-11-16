@@ -21,10 +21,10 @@ API_KEY = "devkey"
 # -------------------------
 # Load training columns (feature order)
 # -------------------------
-if not os.path.exists("creditcard.csv"):
-    raise RuntimeError("creditcard.csv missing - run convert_dataset.py first")
+if not os.path.exists("data/creditcard.csv"):
+    raise RuntimeError("data/creditcard.csv missing - run convert_dataset.py first")
 
-df = pd.read_csv("creditcard.csv")
+df = pd.read_csv("data/creditcard.csv")
 FEATURES = list(df.drop("Class", axis=1).columns)
 print("FEATURES loaded:", FEATURES)
 

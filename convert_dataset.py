@@ -17,7 +17,7 @@ df = pd.DataFrame(data)
 for col in df.select_dtypes(include=['object']).columns:
     df[col] = df[col].str.decode('utf-8')
 
-# Rename columns to match credit card fraud convention (V1, V2, etc.)
+# Rename columns to match credit card fraud convention (V1, V2,..)
 column_mapping = {
     'checking_status': 'Time',
     'duration': 'V1',
@@ -50,10 +50,10 @@ df['Class'] = df['Class'].map({'good': 0, 'bad': 1})
 # Save as creditcard.csv
 df.to_csv('data/creditcard.csv', index=False)
 
-print("✅ SUCCESS! Created creditcard.csv")
+print("SUCCESS! Created creditcard.csv")
 print(f"   Shape: {df.shape}")
 print(f"   Columns: {list(df.columns)}")
 print(f"\nTarget distribution:")
 print(f"   0 (Legitimate): {(df['Class'] == 0).sum()}")
 print(f"   1 (Fraud):      {(df['Class'] == 1).sum()}")
-print("\n🚀 Now run: python train_model.py")
+print("\n Now run: python train_model.py")
